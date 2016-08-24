@@ -1,9 +1,12 @@
+// User score
 let score = 0;
 
+// Random number generator
 var randomGenerator = function (num) {
   return Math.floor(Math.random() * num);
 };
 
+// Create random number to become sum
 var problem = function () {
   let arr = [],
       ran1 = randomGenerator(100),
@@ -15,6 +18,7 @@ var problem = function () {
   return arr;
 };
 
+// Shuffle array values
 var shuffle = (arr) => {
   for (var i = arr.length-1; i >=0; i--) {
 
@@ -27,6 +31,7 @@ var shuffle = (arr) => {
   return arr;
 };
 
+//Set game and play logic
 var showProblemGetAnswer = function () {
   let sum,
       arr,
@@ -68,8 +73,7 @@ var showProblemGetAnswer = function () {
 
 }();
 
-//showProblemGetAnswer(problem());
-
+// Game timer. Buttons are disabled after 
 var gameTimer = function (time) {
   if (time >= 0) {
     setTimeout(function () {

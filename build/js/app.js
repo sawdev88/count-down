@@ -1,11 +1,14 @@
 'use strict';
 
+// User score
 var score = 0;
 
+// Random number generator
 var randomGenerator = function randomGenerator(num) {
   return Math.floor(Math.random() * num);
 };
 
+// Create random number to become sum
 var problem = function problem() {
   var arr = [],
       ran1 = randomGenerator(100),
@@ -17,6 +20,7 @@ var problem = function problem() {
   return arr;
 };
 
+// Shuffle array values
 var shuffle = function shuffle(arr) {
   for (var i = arr.length - 1; i >= 0; i--) {
 
@@ -29,6 +33,7 @@ var shuffle = function shuffle(arr) {
   return arr;
 };
 
+//Set game and play logic
 var showProblemGetAnswer = function () {
   var sum = void 0,
       arr = void 0,
@@ -69,8 +74,7 @@ var showProblemGetAnswer = function () {
   });
 }();
 
-//showProblemGetAnswer(problem());
-
+// Game timer. Buttons are disabled after 
 var gameTimer = function gameTimer(time) {
   if (time >= 0) {
     setTimeout(function () {
