@@ -1,6 +1,3 @@
-// User score
-let score = 0;
-
 // Random number generator
 var randomGenerator = function (num) {
   return Math.floor(Math.random() * num);
@@ -33,7 +30,8 @@ var shuffle = (arr) => {
 
 //Set game and play logic
 var showProblemGetAnswer = function () {
-  let sum,
+  let score = 0,
+      sum,
       arr,
       btn,
       shuffled;
@@ -73,7 +71,7 @@ var showProblemGetAnswer = function () {
 
 }();
 
-// Game timer. Buttons are disabled after 
+// Game timer. Buttons are disabled after
 var gameTimer = function (time) {
   if (time >= 0) {
     setTimeout(function () {

@@ -1,8 +1,5 @@
 'use strict';
 
-// User score
-var score = 0;
-
 // Random number generator
 var randomGenerator = function randomGenerator(num) {
   return Math.floor(Math.random() * num);
@@ -35,7 +32,8 @@ var shuffle = function shuffle(arr) {
 
 //Set game and play logic
 var showProblemGetAnswer = function () {
-  var sum = void 0,
+  var score = 0,
+      sum = void 0,
       arr = void 0,
       btn = void 0,
       shuffled = void 0;
@@ -74,7 +72,7 @@ var showProblemGetAnswer = function () {
   });
 }();
 
-// Game timer. Buttons are disabled after 
+// Game timer. Buttons are disabled after
 var gameTimer = function gameTimer(time) {
   if (time >= 0) {
     setTimeout(function () {
